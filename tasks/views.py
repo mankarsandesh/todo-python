@@ -11,6 +11,7 @@ def index(request):
     tasks = Task.objects.all()
     form = TaskForm()
 
+    # create New Task Code
     if request.method == 'POST':
         form = TaskForm(request.POST)
         if form.is_valid():
